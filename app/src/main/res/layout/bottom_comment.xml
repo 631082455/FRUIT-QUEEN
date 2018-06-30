@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_pinlun"
+    android:background="@mipmap/pinlun_bg">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入评论"
+            android:id="@+id/etComment"
+            android:layout_marginStart="22dp"
+            android:layout_toStartOf="@+id/btnSendPinlun"
+            android:layout_marginEnd="10dp"
+            />
+
+        <ImageButton
+            android:text="发送"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/send"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/btnSendPinlun"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

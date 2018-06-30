@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/layout_top" />
+    <!--显示圆点-->
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="●"
+        android:textColor="#e60012"
+        android:textSize="13sp" />
+
+    <!--食谱名称-->
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/tv1"
+        android:text="香蕉"
+        android:textColor="#000"
+        android:textSize="18sp" />
+    <!--作者-->
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvName"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/tv1"
+        android:text="作者"
+        android:textColor="#000"
+        android:textSize="16sp" />
+    <!--点赞-->
+    <ImageView
+
+        android:id="@+id/btnLike"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_below="@+id/tvAuthor"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@+id/tv1"
+        android:src="@mipmap/dislike" />
+
+    <TextView
+        android:id="@+id/tvLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAuthor"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/btnLike"
+        android:text="2333"
+        android:textColor="#000"
+        android:textSize="16sp" />
+    <!--图片-->
+    <ImageView
+        android:id="@+id/ivPic"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/top"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="10dp" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ivPic"
+        android:layout_marginTop="10dp"
+        android:background="#eeeeee" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:text="用料"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvMaterial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv2"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#000"
+        android:textSize="15sp" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvMaterial"
+        android:layout_marginTop="20dp"
+        android:background="#eeeeee" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line2"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:text="步骤"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvProcedure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv3"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/btnComment"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:text="评论"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+</RelativeLayout>
+
+

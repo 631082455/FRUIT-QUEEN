@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/layout_top_newrecipe" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top"> <!--添加自定义顶部-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--水果信息-->
+            <RelativeLayout
+                android:id="@+id/info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+                <!--显示圆点-->
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="●"
+                    android:textColor="#e60012"
+                    android:textSize="13sp" />
+
+                <!--水果名称-->
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/tv1"
+                    android:text="香蕉"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <!--水果简介-->
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvName"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toEndOf="@+id/tv1"
+                    android:text="简介："
+                    android:textColor="#000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvIntro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvName"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toEndOf="@+id/tv3"
+                    android:layout_toStartOf="@+id/ivPic"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text="芭蕉科芭蕉属植物，又指其果实。热带地区广泛栽培食用。"
+                    android:textColor="#000"
+                    android:textSize="14sp" />
+
+                <!--营养价值-->
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvIntro"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toEndOf="@+id/tv1"
+                    android:text="营养价值："
+                    android:textColor="#000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvNutrition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvIntro"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/tv4"
+                    android:layout_toStartOf="@id/ivPic"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text="香蕉属高热量水果，据分析每100克果肉的发热量达91大卡。"
+                    android:textColor="#000"
+                    android:textSize="14sp" />
+
+                <!--药用价值-->
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvNutrition"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toEndOf="@+id/tv1"
+                    android:text="药用价值："
+                    android:textColor="#000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvMedicine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvNutrition"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/tv5"
+                    android:layout_toStartOf="@+id/ivPic"
+                    android:ellipsize="end"
+                    android:maxLines="03"
+                    android:text="清热解毒，利尿消肿hhhhhhhhhhhh，安胎哈哈哈哈哈哈或或或或哈哈哈。"
+                    android:textColor="#000"
+                    android:textSize="14sp" />
+
+                <!--点击了解更多之后才出现-->
+                <RelativeLayout
+                    android:id="@+id/layout_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvMedicine"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toEndOf="@id/tv1"
+                    android:layout_toStartOf="@+id/ivPic"
+                    android:visibility="gone">
+
+                    <TextView
+
+                        android:id="@+id/tv6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="3dp"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="相生相克："
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvContrary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toEndOf="@+id/tv6"
+                        android:text="香蕉不可和牛奶一起吃，会中毒。:"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv7"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvContrary"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="3dp"
+                        android:text="适宜人群："
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvFit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvContrary"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toEndOf="@+id/tv7"
+                        android:text="适宜高血压、冠心病、动脉硬化者食用；"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvFit"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="3dp"
+                        android:text="不适宜人群："
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvUnfit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvFit"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toEndOf="@+id/tv8"
+                        android:text="体质偏虚寒者空腹的人关节炎患和糖尿病患者肾炎患者"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <!--显示水果的图片-->
+                <ImageView
+                    android:id="@+id/ivPic"
+                    android:layout_width="130dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="43dp" />
+
+                <!--了解更多-->
+                <TextView
+                    android:id="@+id/btnMore"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/ivPic"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="了解更多"
+                    android:textColor="#9293c5"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/info"
+                android:background="#eeeeee" />
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line1"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:text="■"
+                android:textColor="#e60012"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line1"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/tv"
+                android:text="热门菜式"
+                android:textColor="#e60012"
+                android:textSize="18dp" />
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv2"
+                android:layout_marginTop="2dp"
+                android:background="#eeeeee" />
+
+            <!--显示菜谱列表-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line2" />
+
+            <!--上传食谱的按钮-->
+            <!--<ImageView-->
+            <!--android:id="@+id/btnUpload"-->
+            <!--android:layout_width="180dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_below="@+id/rv"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:src="@mipmap/upload" />-->
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
